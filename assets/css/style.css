@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+body {
+    background-color: #c6d7de;
+    font-family: 'Montserrat';
+}
+
+#v0 {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+#set-height{   
+    background: transparent;
+    opacity: 0;
+    transition: 0.2s;
+}
+#set-height.hidden{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    background: black;
+    opacity: 0.5;
+    transition: 0.2s;
+}
+#v1{
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 3;
+    opacity: 0;
+    transition: 1s;
+}
+#v1.show{
+    opacity: 1;
+     transition: 1s;
+}
+#workOuts{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 300px;
+    width: 100%;
+    z-index: 4;
+    opacity: 0;
+}
+#workOuts.show{  
+    opacity: 1;
+}
+
+#workOuts h2{
+    max-width: 50%;
+    background-image: url('../images/red-base.png');
+    height: 3.5rem;
+    background-size: cover;
+    background-repeat: none;
+    background-position-x: right;
+    transition: 0.2s;
+    transition: width 2s;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    margin-top: 6rem;
+    width: 0;
+    transition: 0.5s;
+}
+#workOuts.show h2{
+    width: 50%;
+    transition: 0.5s;
+}
+
+
+#set-height {
+    display: block;
+}
+
+section {
+    z-index: 1;
+    position: relative;
+}
+#element{
+    background-color: rgba(0,0,0,0.4);
+    /* background-color: red; */
+    height: 350px;
+    position: fixed;
+    width: 35%;
+    top: 0;
+    left: 0;
+    margin-left: 20vw;  
+    transition: 0.5s;
+}
+#element.height{
+     height: 550px;
+     text-replace: 0.5s
+}
+.height::after{
+    content: "Not your typical fitness. Workouts scheduled and guided by expert trainers, to unleash your best version";
+    bottom: 0;
+    color: #fff;
+    position: absolute;
+    padding: 2rem 5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    animation: expand 1s;
+}
+@keyframes expand{
+    0%{bottom:50px}
+    100%{bottom:0px}
+}
+
+
+.content {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 25%;
+}
+
+h1 {
+    font-size: 3em;
+    display: inline-block;
+    padding: 10px 25px;
+    margin: 0;
+    color: #fff;
+}
+.content p{
+    display: inline-block;
+    padding-left: 25px;
+    color: #fff;
+}
+p { font-size: 1.5em; }
+
+section:nth-of-type(1) {
+    /* height: 1200px; */
+}
+.content{
+    margin-left: 20vw;
+}
+section:nth-of-type(2) {
+    height: 1200px;
+}
+section:nth-of-type(3) {
+    height: 7000px;
+}
+section:nth-of-type(4) {
+    height: 1000px;
+    z-index: 6;
+}
+section:nth-of-type(5) {
+    height: 1000px;
+}
+section:nth-of-type(6) {
+    height: 1000px;
+}
+section:nth-of-type(7) {
+    height: 1000px;
+}
+.workOutCard{
+    background-color: rgba(0,0,0,0.5);
+    min-height: 400px;
+    
+    text-align: center;
+    position: relative;
+    max-height: 500px;
+    height: 500px;
+    /* overflow: hidden; */
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+}
+.workOutCard .cardContent{
+   
+    position: absolute;
+    transition: 2s;
+    bottom: 0;
+    scroll-behavior: smooth;
+     height: 500px;
+}
+.workOutCard .cardContent.show{    
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    transition: 2s;
+    scroll-behavior: smooth;
+     height: 900px;
+}
+.cardContent img{
+    padding-top: 2.5rem;
+}
+.cardContent p{
+    padding: 3rem;
+    margin-bottom: 0;
+    padding-bottom: 2rem;
+}
+.cardContent .morebtn{
+    position: relative;
+    margin-top: -4rem;
+    padding-top: 0 !important;
+    /* transition: 3s; */
+    width: 2.5rem;
+    transition-delay: 1.5s;
+}
+.cardContent.show .morebtn{
+    transform: rotate(180deg);
+    /* transition: 3s; */
+    transition-delay: 1.5s;
+}
+.miniLine{
+    margin-left: 15%;
+    width: 70%;
+}
+
+
+.workOutCard h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    padding-top: 1rem;
+}
+.workOutCard p{
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    padding-top: 1rem;
+}
+.workOutCard hr{
+    border-color: #666666;
+}
+.line{
+    border: 1px solid #666666;
+}
+.morebtn{
+    cursor: pointer;
+}
+#cont{
+    position: absolute;
+    bottom: 0;
+    z-index: 9;
+    background-color: rgba(0,0,0,0.4);
+    height: 10%;
+    width: 100%;
+    left: 0;
+}
+#cont.show{
+    position: absolute;
+    bottom: 0;
+    z-index: 9;
+    background-color: rgba(0,0,0,0.4);
+    height: 100%;
+    width: 100%;
+    left: 0;
+}
+
+.rebBase{
+    background-image: url('../images/red-base.png');
+    height: 4rem;
+    background-size: cover;
+    background-repeat: none;
+    background-position-x: right;
+    left: 0;
+    top: 50%;
+     position: sticky;
+    position: -webkit-sticky;
+    top: 35%;
+    opacity: 1;
+    width: 0;
+    transition: 0.2s;
+}
+.rebBase.show{
+    width: 70%;
+    opacity: 1;
+    transition: 0.5s;
+}
+#rebBase{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#maximum{
+    color: #fff;
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    letter-spacing: 3rem;
+    opacity: 0;
+    transition: 0.2s;
+}
+#maximum.show{
+    opacity: 1;
+    transition: 0.5s;
+     letter-spacing: 3rem;
+}
+#maximum.showNormal{
+    letter-spacing: 0rem;
+    transition: 0.3s;
+}
+.content h1{
+    text-transform: uppercase;
+}
+#subTitle{
+     position: sticky;
+    position: -webkit-sticky;
+}
+
+
+
+.entered {
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+ @-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+
+
+  #burger{
+      display: none;
+  }
+  #menuBar{
+      margin-bottom: 0;
+  }
+  .navbar{
+      padding: 5px;
+  }
+
+.navbar input + label {
+	 position: absolute;
+	 top: 20px;
+	 right: 40px;
+	 height: 20px;
+	 width: 25px;
+	 z-index: 5;
+}
+ .navbar input + label span {
+	 position: absolute;
+	 width: 100%;
+	 height: 2px;
+	 top: 50%;
+	 /* margin-top: -1px; */
+	 left: 0;
+	 display: block;
+	 background: #ffffff;
+	 transition: 0.5s;
+}
+ .navbar input + label span:first-child {
+	 top: 3px;
+}
+ .navbar input + label span:last-child {
+	 top: 16px;
+}
+ .navbar label:hover {
+	 cursor: pointer;
+}
+ .navbar input:checked + label span {
+	 opacity: 0;
+	 top: 50%;
+}
+ .navbar input:checked + label span:first-child {
+	 opacity: 1;
+	 transform: rotate(405deg);
+}
+ .navbar input:checked + label span:last-child {
+	 opacity: 1;
+	 transform: rotate(-405deg);
+}
+ .navbar input ~ .nav {
+	background-color: rgba(0,0,0,0.5);
+	 position: fixed;
+	 top: 0;
+	 right: 0;
+	 width: 0;
+	 height: 100%;
+	 z-index: 3;
+	 transition: 0.5s;
+	 /* transition-delay: 0.2s; */
+	 overflow: hidden;
+}
+#sideNav{
+     backdrop-filter: blur(6px);
+}
+ .navbar input:checked ~ .nav {
+	 height: 100%;
+	 transition-delay: 0.3s;
+     width: 25rem;
+}
+.bg-theme{
+    background-color: rgba(0,0,0,0.4);
+}
+.menuBase{
+    padding: 4rem 5rem;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 20rem;
+}
+#sideNav ul{
+    list-style: none;
+    padding-left: 0;
+}
+.menuList li{
+    padding-bottom: 1rem;
+}
+.menuList ul{    
+    border-bottom: 1px solid #666;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+    margin-bottom: 1.5rem;
+}
+.menuList li a, .menuContact h2, .menuTiming h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0;
+    
+}
+.menuContact li,
+.menuTiming li{
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 0.8rem;
+}
+.menuTiming{
+    padding-top: 1rem;
+}
+
+
+@media (max-width:767.9px){
+    #v0{
+        object-position: 64%;
+        height: 100%;
+    }
+    .navbar{
+        padding-left: 10%;
+    }
+    .menuContact ul{
+        display: flex;
+        justify-content: space-between;
+    }
+    .menuBase{
+        width: 100%;
+        padding-right: 3rem;
+    }
+    .menuContact{
+        width: 100%;
+    }
+    .menuTiming li{
+        width: 50%;
+        float: left;
+    }
+}
+
+ 
