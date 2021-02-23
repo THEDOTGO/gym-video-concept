@@ -36,6 +36,7 @@
             else {
                 vid.style.display = "block";
             }
+
             var redB = document.getElementById("rebBase");
             var max = document.getElementById("maximum");
             var element = document.getElementById("element");
@@ -43,7 +44,13 @@
             var setHeight = document.getElementById("set-height");
             var workout = document.getElementById("workOuts");
 
+            // const el = document.querySelector(".trainers");
+            // console.log(el.scrollLeft, el.scrollTop);
+
+
+
             var rebBase = redB.offsetTop;
+
             console.log(rebBase);
             if(rebBase>1010){
                redB.classList.add("show");
@@ -85,6 +92,10 @@
             else{
                 v1.classList.remove("show");
             }
+
+            // if(rebBase>6900){
+            //     v1.classList.remove("show");
+            // }
         }
         window.requestAnimationFrame(scrollPlay);
 

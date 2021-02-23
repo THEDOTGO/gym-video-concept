@@ -175,8 +175,19 @@
                <div class="row m-0" style="width:100%; height: 100%;">
                     <div class="col-lg-5 thumb-details">
                         <div class="thumbStrip">
-                            <ul>
-                                <li></li>
+                            <ul id="myDIV">
+                                <li id="thumb1" class="thumbli" onClick="thumb_click(this.id)" value="0">
+                                    <div></div>
+                                </li>
+                                <li id="thumb2" class="thumbli active" onClick="thumb_click(this.id)" value="1">
+                                    <div></div>
+                                </li>
+                                <li id="thumb3" class="thumbli" onClick="thumb_click(this.id)" value="2">
+                                    <div></div>
+                                </li>
+                                <li id="thumb4" class="thumbli" onClick="thumb_click(this.id)" value="3">
+                                    <div></div>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -186,8 +197,32 @@
                                 Hai
                             </div>
                             <div class="col-lg-7 CardOne" style="position:relative" style="overflow: scroll;"> 
-                                <div class="CardMain">
-                                    <div class="trainerD">
+                                <div class="CardMain" id="CardMain">
+                                    <div class="trainerD" id="OrderOne">
+                                        <div class="trainerDetails">
+                                            <div class="trainerContent">
+                                                <h3>Methodology</h3>
+                                                <p>In eget arcu ultrices, lacinia turpis sit amet, fermentum diam. Donec itrrteyett fermentum dui a pretium
+                                                    rutrum. Cras nec turpis blandit, interdum sem wrpo. Donec itrrteyett fermentum dui a typot pretium
+                                                    rutrum
+                                                    nec turpis blandit.</p>
+                                                <h3>Experience</h3>
+                                                <p>In eget arcu ultrices, lacinia turpis sit amet, fermentum diam. Donec ferbent dui a pretium rutrum. Cras
+                                                    nec
+                                                    turpis blandit, interdum sem a, varius nunc.</p>
+                                                <h3>Certifications</h3>
+                                                <p>In eget arcu ultrices, lacinia turpis sit. Donec fermetum dui a pretium rutrum. Cras nec turpis blandit,
+                                                    interdum sem.
+                                                    Varius nunc kjletnm tugh uiodkln qwe.</p>
+                                            </div>
+                                        </div>
+                                        <img src="assets/images/up-down-button.svg" onClick="reply_click(this.id)" class="iconTrainer" id="iconT2">
+                                        <div class="trainerImg">
+                                            <img src="assets/images/trainer-sapna.jpg">
+                                        </div>
+                                    </div>
+
+                                    <div class="trainerD" id="OrderTwo">
                                         <div class="trainerDetails">
                                             <div class="trainerContent">
                                                 <h3>Methodology</h3>
@@ -211,7 +246,31 @@
                                         </div>
                                     </div>
 
-                                    <div class="trainerD">
+                                    <div class="trainerD" id="OrderThree">
+                                        <div class="trainerDetails">
+                                            <div class="trainerContent">
+                                                <h3>Methodology</h3>
+                                                <p>In eget arcu ultrices, lacinia turpis sit amet, fermentum diam. Donec itrrteyett fermentum dui a pretium
+                                                    rutrum. Cras nec turpis blandit, interdum sem wrpo. Donec itrrteyett fermentum dui a typot pretium
+                                                    rutrum
+                                                    nec turpis blandit.</p>
+                                                <h3>Experience</h3>
+                                                <p>In eget arcu ultrices, lacinia turpis sit amet, fermentum diam. Donec ferbent dui a pretium rutrum. Cras
+                                                    nec
+                                                    turpis blandit, interdum sem a, varius nunc.</p>
+                                                <h3>Certifications</h3>
+                                                <p>In eget arcu ultrices, lacinia turpis sit. Donec fermetum dui a pretium rutrum. Cras nec turpis blandit,
+                                                    interdum sem.
+                                                    Varius nunc kjletnm tugh uiodkln qwe.</p>
+                                            </div>
+                                        </div>
+                                        <img src="assets/images/up-down-button.svg" onClick="reply_click(this.id)" class="iconTrainer" id="iconT3">
+                                        <div class="trainerImg">
+                                            <img src="assets/images/trainer-janet.jpg">
+                                        </div>
+                                    </div>
+
+                                    <div class="trainerD" id="OrderFour">
                                         <div class="trainerDetails">
                                             <div class="trainerContent">
                                                 <h3>Methodology2</h3>
@@ -229,9 +288,9 @@
                                                     Varius nunc kjletnm tugh uiodkln qwe.</p>
                                             </div>
                                         </div>
-                                        <img src="assets/images/up-down-button.svg" onClick="reply_click(this.id)" class="iconTrainer" id="iconT2">
+                                        <img src="assets/images/up-down-button.svg" onClick="reply_click(this.id)" class="iconTrainer" id="iconT4">
                                         <div class="trainerImg">
-                                            <img src="assets/images/trainer-vinod.jpg">
+                                            <img src="assets/images/trainer-ashraf.jpg">
                                         </div>
                                     </div>
                                 </div>
@@ -258,7 +317,44 @@
          function reply_click(clicked_id) {
                 // alert(clicked_id);
                 document.getElementById(clicked_id).parentNode.classList.toggle("show");
+                if(clicked_id=="thumb1"){
+                    document.getElementById('CardMain').style.top="0px";
+                }
+                if (clicked_id == "thumb2") {
+                 document.getElementById('CardMain').style.top = "-100%";
+                }
+                if (clicked_id == "thumb3") {
+                    document.getElementById('CardMain').style.top = "-200%";
+                }
+                if (clicked_id == "thumb4") {
+                    document.getElementById('CardMain').style.top = "-300%";
+                }
+            }
+
+            function thumb_click(clicked_id) {
+                var thumblink = document.getElementById(clicked_id).getAttribute("value");
+                document.getElementById('CardMain').style.top = -thumblink*100 + "%";    
+                         
             }
     </script>
+
+
+<script>
+    var header = document.getElementById("myDIV");
+    var btns = header.getElementsByClassName("thumbli");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+            console.log(i);
+        });
+    }
+</script>
+
+<script>
+    const element = document.querySelector("#thumb1");  
+    
+</script>
 </body>
 </html>
