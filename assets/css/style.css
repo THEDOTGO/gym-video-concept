@@ -634,6 +634,7 @@ transform: rotate(-90deg);
 .owl-carousel .img_box{
     background-position: right;
      transition: ease-in-out 0.5s;
+     position: relative;
 }
 
 .owl-carousel .owl-item.active.center .img_box{
@@ -652,17 +653,17 @@ transform: rotate(-90deg);
     -webkit-tap-highlight-color: transparent;
 }
 .owlGymTour button.owl-dot{
-    width: 15px !important;
-    height: 15px !important;
+    width: 12px !important;
+    height: 12px !important;
     border-radius: 50% !important;
     background: transparent !important;
     border: 1px solid #fff !important;
-    margin: 0 0.5rem;
+    margin: 0 1rem;
 }
 .owlGymTour button.owl-dot.active, .owlGymTour button.owl-dot:hover{
     background: #fff !important;
     border: 1px solid #fff !important;
-    margin: 0 0.5rem;
+    
 }
 .owl-nav{
     width: 100%;
@@ -686,17 +687,40 @@ transform: rotate(-90deg);
 .owl-nav img{
     width: 5rem;
     opacity: 0;
+    position: relative;
 }
 .owl-nav a:hover img{
      opacity: 1;
 }
 
-
-
-
-
-
-
+.owlContent{
+    width: 80%;
+    position: absolute;
+    bottom: 5%;
+    background: rgba(0,0,0,0.5);
+    padding: 1rem 2rem;
+    opacity: 0;
+    transition: 0.3s;
+}
+.owlContent h2{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    transform: scaleY(0.9);
+}
+.owlContent p{
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    transform: scaleY(0.9);
+}
+.center .owlContent{
+    opacity: 1;
+    transition: 0.3s;
+}
 
 /**
  * ----------------------------------------
