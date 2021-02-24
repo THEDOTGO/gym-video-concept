@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/owlcarousel/owl.carousel.min.css">
     <title>Gym Video Concept</title>
 </head>
 
@@ -193,12 +194,38 @@
                     </div>
                     <div class="col-lg-7 trainer-Details">
                         <div class="row" style="height: 100%;">
-                            <div class="col-lg-3">
-                                Hai
+                            <div class="col-lg-2 cardLeft" style="position:relative;">
+                                <div class="CardName" id="CardName">                                    
+                                    <div class="trainerName">
+                                        <div class="rotate">
+                                            <h2>Ashraf Abid</h2>
+                                            <h3>Functional Fitness</h3>
+                                        </div>
+                                    </div>
+                                    <div class="trainerName">
+                                        <div class="rotate">
+                                            <h2>Janet Mark</h2>
+                                            <h3>Bodybuilding Coach</h3>
+                                        </div>
+                                    </div>
+                                    <div class="trainerName">
+                                        <div class="rotate">
+                                            <h2>Vinod Kumar</h2>
+                                            <h3>Crossfit Coach</h3>
+                                        </div>
+                                    </div>
+                                    <div class="trainerName">
+                                        <div class="rotate">
+                                            <h2>Sapna Nath</h2>
+                                            <h3>Cardio & Conditioning</h3>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
                             </div>
-                            <div class="col-lg-7 CardOne" style="position:relative" style="overflow: scroll;"> 
+                            <div class="col-lg-7 CardOne" style="position:relative;"> 
                                 <div class="CardMain" id="CardMain">
-                                    <div class="trainerD" id="OrderOne">
+                                    <div class="trainerD" id="thumb1img">
                                         <div class="trainerDetails">
                                             <div class="trainerContent">
                                                 <h3>Methodology</h3>
@@ -222,7 +249,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="trainerD" id="OrderTwo">
+                                    <div class="trainerD active" id="thumb2img">
                                         <div class="trainerDetails">
                                             <div class="trainerContent">
                                                 <h3>Methodology</h3>
@@ -246,7 +273,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="trainerD" id="OrderThree">
+                                    <div class="trainerD" id="thumb3img">
                                         <div class="trainerDetails">
                                             <div class="trainerContent">
                                                 <h3>Methodology</h3>
@@ -270,7 +297,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="trainerD" id="OrderFour">
+                                    <div class="trainerD" id="thumb4img">
                                         <div class="trainerDetails">
                                             <div class="trainerContent">
                                                 <h3>Methodology2</h3>
@@ -302,39 +329,105 @@
         </div>
     </div>
     <div class="workout-section">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, esse. Voluptate consectetur temporibus animi
-        nostrum quibusdam deserunt excepturi doloremque nisi dolores impedit! Quia ipsam quo doloribus, sed amet cumque
-        laboriosam?
+        <div class="workout-content">
+            <div class="bg_overlay"></div>
+            <div id="heading-strip">
+                <h2>Gym Tour</h2>
+            </div>
+
+
+            <div class="container-fluid p-0" style="display: flex; align-items: center; height: 100%;">
+                <div class="owl-carousel owlGymTour">   
+                    <div class="owlElement">
+                        <div class="img_box" style="background-image: url('assets/images/gym-1.jpg');">
+                            Hello
+                        </div>
+                    </div> 
+                    <div class="owlElement">
+                        <div class="img_box" style="background-image: url('assets/images/gym-2.jpg');">
+                            Hello
+                        </div>
+                    </div>
+                    <div class="owlElement">
+                        <div class="img_box" style="background-image: url('assets/images/gym-3.jpg');">
+                            Hello
+                        </div>
+                    </div>
+                    <div class="owlElement">
+                        <div class="img_box" style="background-image: url('assets/images/gym-4.jpg');">
+                            Hello
+                        </div>
+                    </div>
+                    <div class="owlElement">
+                        <div class="img_box" style="background-image: url('assets/images/gym-5.jpg');">
+                            Hello
+                        </div>
+                    </div>
+
+                   
+                    <!-- <div class="img_box" style="background-image: url('assets/images/gym-2.jpg');">
+                    </div>
+                    <div class="img_box" style="background-image: url('assets/images/gym-3.jpg');">
+                    </div>
+                    <div class="img_box" style="background-image: url('assets/images/gym-4.jpg');">
+                    </div>
+                    <div class="img_box" style="background-image: url('assets/images/gym-5.jpg');">
+                    </div> -->
+                </div>
+            </div>
+        </div>      
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
     <script src="assets/js/sticky.js"></script>
     <script src="assets/js/custum.js"></script>
+    <script src="assets/owlcarousel/owl.carousel.min.js"></script>
+   
 
     <script>
          function reply_click(clicked_id) {
                 // alert(clicked_id);
                 document.getElementById(clicked_id).parentNode.classList.toggle("show");
-                if(clicked_id=="thumb1"){
-                    document.getElementById('CardMain').style.top="0px";
-                }
-                if (clicked_id == "thumb2") {
-                 document.getElementById('CardMain').style.top = "-100%";
-                }
-                if (clicked_id == "thumb3") {
-                    document.getElementById('CardMain').style.top = "-200%";
-                }
-                if (clicked_id == "thumb4") {
-                    document.getElementById('CardMain').style.top = "-300%";
-                }
+                
             }
 
             function thumb_click(clicked_id) {
                 var thumblink = document.getElementById(clicked_id).getAttribute("value");
-                document.getElementById('CardMain').style.top = -thumblink*100 + "%";    
-                         
+                document.getElementById('CardMain').style.top = -thumblink*100 + "%"; 
+                 document.getElementById('CardName').style.bottom = -thumblink * 100 + "%"; 
+                
+                // if(thumblink==0){                    
+                //     document.querySelector('#thumb1img').className += " active";
+                //     document.querySelector('#thumb2img').classList.remove("active");
+                //     document.querySelector('#thumb3img').classList.remove("active");
+                //     document.querySelector('#thumb4img').classList.remove("active");
+                // }
+                // if (thumblink == 1) {
+                //     document.querySelector('#thumb1img').classList.remove("active");
+                //     document.querySelector('#thumb2img').className += " active";
+                //     document.querySelector('#thumb3img').classList.remove("active");
+                //     document.querySelector('#thumb4img').classList.remove("active");
+                // }
+                // if (thumblink == 2) {
+                //     document.querySelector('#thumb1img').classList.remove("active");
+                //     document.querySelector('#thumb2img').classList.remove("active");
+                //     document.querySelector('#thumb3img').className += " active";
+                //     document.querySelector('#thumb4img').classList.remove("active");
+                // }
+                // if (thumblink == 3) {
+                //     document.querySelector('#thumb1img').classList.remove("active");
+                //     document.querySelector('#thumb2img').classList.remove("active");
+                //     document.querySelector('#thumb3img').classList.remove("active");
+                //     document.querySelector('#thumb4img').className += " active";
+                // }
+                //  document.querySelector('#' + clicked_id + 'img').classList.add("active");
+
+               
+              
+            //    document.querySelector('#'+clicked_id+'img' ).classList.add("active");
+                // document.querySelector(".trainerD").className.replace("trainerD", "");
             }
     </script>
 
@@ -352,9 +445,38 @@
     }
 </script>
 
+
+
 <script>
-    const element = document.querySelector("#thumb1");  
-    
+    $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+            loop: true,
+            items: 3,
+            dots: false,
+            nav: false,
+            autoplay: true,
+            smartSpeed: 1000,
+            center: true,
+            autoHeight: true,
+            URLhashListener: true,
+            autoplayHoverPause: true,
+            startPosition: 'URLHash',
+            responsive: {
+                0: {
+                    items: 2,
+                    dots: false,
+                },
+                600: {
+                    items: 3,
+                    dots: false,
+                },
+                1000: {
+                    items: 2,
+                    dots: false,
+                }
+            }
+        })
+        });
 </script>
 </body>
 </html>

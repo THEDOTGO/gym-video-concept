@@ -338,7 +338,7 @@ section:nth-of-type(7) {
 }
 .workout-section{
     position: relative; 
-    height: 1000px; 
+    height: 100vh; 
     width: 100%; 
     background-color: Green; 
     z-index: 12; 
@@ -350,6 +350,14 @@ section:nth-of-type(7) {
      position: relative; 
      height: 100vh;
      background:url('../images/section-3-bkgnd.jpg');
+     background-position: center;
+     background-size: cover;
+     background-attachment: fixed;    
+}
+.workout-content{
+     position: relative; 
+     height: 100vh;
+     background:url('../images/section-4-bkgnd.jpg');
      background-position: center;
      background-size: cover;
      background-attachment: fixed;    
@@ -450,7 +458,7 @@ section:nth-of-type(7) {
     left: -255px;
     align-items: center;
     position: relative;
-    transition: 0.3s;
+    transition: ease-in-out 0.5s;
     justify-content: space-between;
     height: 30rem;
 }
@@ -459,8 +467,41 @@ section:nth-of-type(7) {
 }
 .trainerD.show{
     left: 0px;
-    transition: 0.3s;
+    transition: ease-in-out 0.5s;
 }
+
+/* .trainerD{
+    display: flex;
+    left: -255px;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    transition: 0.2s;
+    justify-content: space-between;
+    height: 0rem;
+    opacity: 0;
+}
+
+.trainerD.active{
+    height: 30rem;
+    opacity: 1;
+     transition: 1s;
+     z-index: 999;
+} */
+
+/* #thumb1img{
+    z-index: 17;
+}
+#thumb2img{
+    z-index: 18;
+}
+#thumb3img{
+    z-index: 19;
+}
+#thumb4img{
+    z-index: 20;
+} */
+
 .iconTrainer{    
     margin-right: -1rem;
     position: relative;
@@ -478,7 +519,7 @@ section:nth-of-type(7) {
 .CardMain{
     position: absolute;
     top: -100%;
-    transition: 0.4s;
+    transition:ease-in-out 0.5s;
     display: flex;
     flex-direction: column;
 }
@@ -531,7 +572,77 @@ section:nth-of-type(7) {
 #thumb4 div{
     background-image: url('../images/trainer-ashraf.jpg');
 }
+.cardLeft{
+    max-width: 100px;
+}
+.trainerName{
+   /* transform: rotate(-90deg);     */
+   height:480px;
+   display: flex;
+}
+.trainerName .rotate{
+transform: rotate(-90deg);     
+}
+.trainerName h2{
+  font-size: 1.5rem;
+  color: #fafafa;
+  font-weight: 600;
+  text-transform: uppercase;  
+  width: 475px;  
+  padding-left: 1.5rem;
+}
+.trainerName h3{
+   font-size: 1rem;
+  color: #fafafa;
+  font-weight: 400;
+  text-transform: uppercase; 
+  width: 475px; 
+  padding-left: 1.5rem;
+  margin-bottom: 0;    
+}
 
+.cardLeft{
+    height: 100%;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.CardName{
+    position: absolute;
+    bottom: -100%;
+     transition:ease-in-out 0.5s;
+}
+.owlGymTour .img_box{
+    height: 350px;
+    margin: 5rem;
+    background-position: left;
+    background-size: cover;
+    /* background-attachment: fixed; */
+}
+.owl-carousel {
+  transform: scale(1) !important;
+  transition: 0.5s;
+}
+.owl-carousel .owl-item.active.center {
+  transform: scale(1.2) !important;
+  z-index: 9;
+   transition: 0.5s;
+}
+
+.owl-carousel .img_box{
+    background-position: left;
+     transition: 0.5s;
+}
+
+.owl-carousel .owl-item.active.center .img_box{
+    background-position: center;
+     transition: 0.5s;
+}
+
+.owl-carousel .owl-item.active.center+ .owl-item .img_box{
+    background-position: right !important;
+     transition: 0.5s;
+     color: red;
+}
 
 
 
