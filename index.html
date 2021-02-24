@@ -334,33 +334,31 @@
             <div id="heading-strip">
                 <h2>Gym Tour</h2>
             </div>
-
-
             <div class="container-fluid p-0" style="display: flex; align-items: center; height: 100%;">
-                <div class="owl-carousel owlGymTour">   
+                <div class="owl-carousel owlGymTour" style="position: relative;">   
                     <div class="owlElement">
                         <div class="img_box" style="background-image: url('assets/images/gym-1.jpg');">
-                            Hello
+                            
                         </div>
                     </div> 
                     <div class="owlElement">
                         <div class="img_box" style="background-image: url('assets/images/gym-2.jpg');">
-                            Hello
+                            
                         </div>
                     </div>
                     <div class="owlElement">
                         <div class="img_box" style="background-image: url('assets/images/gym-3.jpg');">
-                            Hello
+                            
                         </div>
                     </div>
                     <div class="owlElement">
                         <div class="img_box" style="background-image: url('assets/images/gym-4.jpg');">
-                            Hello
+                            
                         </div>
                     </div>
                     <div class="owlElement">
                         <div class="img_box" style="background-image: url('assets/images/gym-5.jpg');">
-                            Hello
+                            
                         </div>
                     </div>
 
@@ -451,11 +449,11 @@
     $(document).ready(function () {
             $('.owl-carousel').owlCarousel({
             loop: true,
-            items: 3,
-            dots: false,
-            nav: false,
+            items: 3,            
+            nav: true,
             autoplay: true,
-            smartSpeed: 1000,
+            dots: true,
+            smartSpeed: 600,
             center: true,
             autoHeight: true,
             URLhashListener: true,
@@ -464,15 +462,15 @@
             responsive: {
                 0: {
                     items: 2,
-                    dots: false,
+                    dots: true,
                 },
                 600: {
                     items: 3,
-                    dots: false,
+                   dots: true,
                 },
                 1000: {
                     items: 2,
-                    dots: false,
+                    dots: true,
                 }
             }
         })
