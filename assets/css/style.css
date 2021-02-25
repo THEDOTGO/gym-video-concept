@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
+
+@font-face { font-family: Atmospheric; src: url('../fonts/Atmospheric-rg4aL.ttf'); }
+@font-face { font-family: Atmospheric; src: url('../fonts/Atmospheric-YzMG4.otf'); }
+@font-face { font-family: Headache; src: url('../fonts/Headache-Font-OTF.otf'); }
 body {
     background-color: #c6d7de;
     font-family: 'Montserrat';
@@ -81,12 +85,28 @@ body {
     margin-top: 6rem;
     width: 0;
     transition: 0.5s;
+    margin-bottom: -0.5rem;
 }
 #workOuts.show h2{
     width: 50%;
     transition: 0.5s;
 }
-
+#power{
+    opacity: 0;
+    transition:ease-out 0.2s;
+    font-family: Headache;
+}
+#power.show{
+    opacity: 1;
+    transition:ease-in 0.3s;
+    height: auto;
+}
+.headache{
+    font-family: Headache;
+}
+.atmose{
+    font-family: Atmospheric;
+}
 
 #set-height {
     display: block;
@@ -109,7 +129,7 @@ section {
 }
 #element.height{
      height: 550px;
-     text-replace: 0.5s
+     transition: 0.5s
 }
 .height::after{
     content: "Not your typical fitness. Workouts scheduled and guided by expert trainers, to unleash your best version";
@@ -144,6 +164,7 @@ h1 {
     display: inline-block;
     padding-left: 25px;
     color: #fff;
+    font-size: 2.2rem;
 }
 p { font-size: 1.5em; }
 
@@ -271,7 +292,7 @@ section:nth-of-type(7) {
 
 .rebBase{
     background-image: url('../images/red-base.png');
-    height: 4rem;
+    height: 3.25rem;
     background-size: cover;
     background-repeat: none;
     background-position-x: right;
@@ -302,6 +323,7 @@ section:nth-of-type(7) {
     letter-spacing: 3rem;
     opacity: 0;
     transition: 0.2s;
+    margin-top: 0.75rem;
 }
 #maximum.show{
     opacity: 1;
@@ -395,6 +417,7 @@ section:nth-of-type(7) {
      text-transform: uppercase;
      margin-bottom: 0;
      color: #fff;
+     margin-bottom: -0.5rem;
 }
 .trainer-Details{
     height: 30rem;
@@ -871,6 +894,165 @@ transform: rotate(-90deg);
     padding-top: 1rem;
 }
 
+.review-section{
+    position: relative; 
+    height: 100vh; 
+    width: 100%; 
+    background-color: Green; 
+    z-index: 12; 
+    position: sticky;
+    position: -webkit-sticky; 
+    top: 0;
+}
+.review-content{
+     position: relative; 
+     height: 100vh;
+     background:url('../images/section-4-bkgnd.jpg');
+     background-position: center;
+     background-size: cover;
+     background-attachment: fixed;    
+}
+.bg_overlay2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0,0,0,0.1);
+     backdrop-filter: blur(4px);
+     -webkit-backdrop-filter: blur(4px);
+     z-index: 9;
+}
+.review{
+    height: 400px;
+    width: 100%;
+    margin-top: 10rem;
+}
+.review-section .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    z-index:999;
+}
+
+.carousel-control-prev{
+    left: 10px !important;
+}
+.carousel-control-next{
+    right: 10px;
+}
+.carousel{
+    position: static;
+}
+.reviewImg{
+    position: relative;
+    padding-left: 0;
+}
+.navigation{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(0,0,0,0.6);
+    padding-left: 10px;
+}
+.reviewCont{
+    background: rgba(0,0,0,0.6);
+    padding: 2rem 3rem;
+}
+
+.reviewCont:before {
+    	content: '';
+    	position: absolute;
+    	left: 0%;
+    	top: 10%;
+    	width: 0;
+    	height: 0;
+    	width: 0; 
+  height: 0; 
+      border-left: 4.5rem solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 2rem solid rgba(0,0,0,0.6);
+    margin-left: -4.5rem;
+    }
+.testimonial{
+    font-size: 0.8rem;
+    color: #fafafa;
+    line-height: 1.2rem;
+    font-weight: 300;
+}
+.auther{
+    font-size: 1.125rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+     font-family: 'Montserrat';
+     margin-bottom: 0;
+     margin-top: 1.5rem;
+}
+.position{
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    font-weight: 400;
+     font-family: 'Montserrat';
+     margin-bottom: 0;
+}
+.carousel-inner{
+    height: 15rem;
+}
+.carousel-item{
+    height: 100%;
+}
+.carousel-item img{
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+.footer{
+    height: 100px; 
+    position: absolute; 
+    background-color: rgba(0,0,0,0.5); 
+    z-index: 999; 
+    bottom: 0;
+}
+.footer p{
+    font-size: 0.8rem;
+    color: #BFBFBF;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+.footer ul{
+    list-style: none;
+    margin-bottom: 0;
+}
+.footer ul li{
+    display: inline-block;
+    padding: 10px;
+}
+.footer ul li img{
+   width: 42px;
+}
+.footer .secOne{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer .secTwo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.workoutContainer{
+    position: sticky; position: -webkit-sticky; top: 0
+}
+.cardLeft{
+    position: relative;
+}
+
 
 @media (max-width:767.9px){
     #v0{
@@ -880,7 +1062,7 @@ transform: rotate(-90deg);
     .navbar{
         padding-left: 10%;
     }
-    .menuContact ul{
+    /* .menuContact ul{
         display: flex;
         justify-content: space-between;
     }
@@ -894,7 +1076,233 @@ transform: rotate(-90deg);
     .menuTiming li{
         width: 50%;
         float: left;
+    } */
+  
+    #element{
+        background-color: rgba(0,0,0,0.4);
+        /* background-color: red; */
+        height: 100vh;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        margin-left: 0; 
+        transition: 0.5s;
     }
+    .content{
+        margin-left: 0vw;
+    }
+    #maximum.show{
+        letter-spacing: 1rem;
+    }
+    #maximum{
+        font-size: 2rem;
+        margin-left: -20px;
+    }
+    .rebBase.show{
+        width: 99%;
+    }
+    #element.height{
+        height: 100vh;
+        transition: 0.5s
+    }
+    #maximum.showNormal
+    {
+        letter-spacing: 0rem;
+    }
+    #power{
+        text-align: center;
+        width: 100%;
+    }
+    .height::after{
+        content: "Not your typical fitness. Workouts scheduled and guided by expert trainers, to unleash your best version";
+        
+        color: #fff;
+        position: absolute;
+        padding: 1rem 1rem;
+        font-size: 1.2rem;
+        text-align: center;
+        padding-bottom: 50%;
+    }
+    #workOuts h2{
+        font-size: 2.2rem;
+        max-width: 99%;
+        padding-right: 1rem;
+    }
+    #workOuts.show h2{
+        width: 90%;
+    }
+    section:nth-of-type(3) {
+    height: 4000px;
+}   
+    .workoutContainer{
+        position: relative; 
+    }
+    #heading-strip h2{
+        font-size: 2.2rem;
+    }
+    #heading-strip h2{
+        font-size: 2.2rem;
+        padding-right: 1rem;        
+    }
+    #heading-strip{
+        width: 98%;
+    }
+    .thumbStrip{
+        width: 100%;
+        flex-direction: row;
+        height: 10rem;
+        display: flex;
+        margin-top: 8rem;
+        align-items: flex-end;
+        justify-content: center;
+        background: transparent;
+    }
+    .thumbStrip ul li{
+        margin-bottom: 2rem;
+        cursor: pointer;
+        overflow:hidden;
+        display: inline-block;
+        
+    }
+    .trainer-Details{
+        height: 30rem;
+        width: 100%;
+        background: transparent;
+        margin-top: 0.5rem;
+    }
+    .cardLeft{
+        max-width: 100%;
+        /* display: none; */
+        position: absolute;
+        z-index: 99;
+        bottom: 0;
+    }
+    .trainerName .rotate{
+            /* transform: rotate(0deg); */
+    }
+    .trainerName{
+        display: inline-block;
+    }
+   
+    .CardOne{
+        margin-top: -15% !important;
+    }
+    #heading-strip{
+        top: 10%;
+    }
+    .trainerContent h3{
+        font-size: 0.8rem;
+    }
+    .trainerContent p{
+        font-size: 0.65rem;
+        font-weight: 100;
+        color: #fff;
+        text-align: left;
+        line-height: 1rem;
+        }
+        .trainerContent{
+                position: relative;
+    margin-top: -15%;
+        }
+        .trainerImg img{
+                width: 75%;
+    height: 85%;
+        }
+        .iconTrainer{
+            position: relative;
+            z-index: 999;
+        }
+        .trainerName h2{
+            margin-top: 20%;
+        }
+        .owlGymTour .img_box{
+            margin: 10px;
+            height: 340px;
+        }
+        .owlContent{
+            width: 100%;
+        }
+        #gymT{
+            padding-top: 25%;
+            margin-top: 10px;
+        }
+        .owlGymTour .owl-dots{
+            margin-top: 10%;
+        }
+        .review {
+            margin-top: 5rem;
+        }
+        .carousel-item img{
+            height: 6rem;
+            width: 6rem;
+            border-radius: 50%;
+            margin-left: 35%;
+        }
+        .carousel-inner{
+            height: auto;
+        }
+        .reviewImg{
+            position: absolute;
+            z-index: 99;
+            margin-top: -20px;
+        }
+        .navigation{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background: transparent;
+            margin-top: 5%;
+        }
+        .reviewCont{
+            padding: 2rem 1rem;
+    padding-top: 5rem;
+        }
+        .testimonial{
+                font-size: 0.75rem;
+    color: #fafafa;
+    line-height: 1rem;
+    font-weight: 100;
+    text-align: center;
+        }
+        .auther{
+            font-size: 1rem;
+            text-align: center;
+        }
+        .position{
+             font-size: 0.85rem;
+            text-align: center;
+        }
+        .footer ul li img{
+                width: 25px;
+        }
+        .footer p{
+            font-size: 0.7rem;
+            text-align: center;
+        }
+        .footer .secTwo{
+                align-items: center;
+        }
+        .footer ul{
+            padding-left: 0;
+        }
+        .footer {
+            height: 90px;
+        }
+        .owl-nav img{
+            opacity: 1;
+        }
+        .owl-nav img{
+            width: 1.5rem;
+        }
+        .owl-nav{
+            padding: 2rem;
+        }
+        .workOutCard{
+            margin-bottom: 15px;
+        }
+
+   
 }
 
  

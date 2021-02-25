@@ -28,6 +28,13 @@
             var frameNumber1 = (window.pageYOffset-4000) / playbackConst1;
             vid1.currentTime = frameNumber1;
 
+            if(window.pageYOffset<903){
+                document.getElementById("power").classList.remove("show");
+            }
+            else{
+                document.getElementById("power").classList.add("show");
+            }
+
 
             window.requestAnimationFrame(scrollPlay);
             if (vid.currentTime >= vid.duration) {
